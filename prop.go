@@ -11,6 +11,9 @@ func LoadProperties(structPointer interface{}, filename string) error {
 	if err != nil {
 		return err
 	}
-	prop.Load(f)
+	defer f.Close()
+	if err := prop.Load(f); err != nil {
+		return err
+	}
 	return Unmarshal(structPointer, prop.GetMap())
 }
