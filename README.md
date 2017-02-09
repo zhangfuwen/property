@@ -1,5 +1,10 @@
 # property
-load java property file content and reflect it into a structure
+load java property file content and reflect it into a structure using golang
+
+
+在golang中加载java properties文件内容，到结构体。
+如果不想加载到结构体而只想加载到map， 请使用：
+https://github.com/zhangfuwen/props
 
 # Usage
 Write a property file with content:
